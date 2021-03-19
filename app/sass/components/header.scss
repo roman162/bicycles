@@ -1,0 +1,161 @@
+.page-header{
+    position: relative;    
+    margin: 0;
+    color: $white;
+    text-align: center;
+
+    @media screen and (min-width: $tab){
+
+    }
+}
+
+.header__container{
+    background-image: url(../images/dest/ImgBikeMobile.jpg);
+    background-size: 100%;
+    padding-bottom: 52px;
+
+    @media screen and (min-width: $tab) {
+        background-image: url(../images/dest/ImgBikeTab.jpg);
+        padding-bottom: 80px;
+    }
+}
+
+.header__menu{
+    display: none;
+}
+
+.header__logo{
+    position: absolute;
+    top: 25px;
+    left: 17px;
+
+    @media screen and (min-width: $tab){
+        left: 22px;
+    }
+}
+
+.header__toggle{
+    position: relative;
+    margin-left: auto;
+    width: 50px;
+    height: 50px;
+    background-color: $azure;
+    display: flex;
+}
+
+.toggle__gamburger{
+    width: 22px;
+    height: 1px;
+    background-color: $black;
+    margin: auto;
+    position: relative;
+
+    &:after{
+        content: '';
+        display: block;
+        width: 22px;
+        height: 1px;
+        background-color: $black;
+        position: absolute;
+        top: 7px;
+        right: 0;
+    }
+
+    &:before{
+        content: '';
+        display: block;
+        width: 22px;
+        height: 1px;
+        background-color: $black;
+        position: absolute;
+        top: -7px;
+        left: 0;
+    }
+}
+
+.header__title{
+    margin-top: 70px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 42px;
+    font-size: 30px;
+
+    @media screen and (min-width: $tab){
+        margin-top: 84px;
+    }
+}
+
+.header__description{
+    font-weight: 300;
+    line-height: 32px;
+    font-size: 18px;
+    display: block;
+    padding: 0 15px;
+
+    @media screen and (min-width: $tab){
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+.header__form{
+    color: $black;
+    margin: 0 auto;
+    margin-top: 70px;    
+    max-width: 356px;
+    padding: 0 16px;    
+}
+
+.header__form-item{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+
+    @media screen and (min-width: $tab){
+        margin-top: 30px;
+    }
+}
+
+.form__title{
+    font-size: 18px;
+    line-height: 28px;
+    display: block;
+    font-weight: 500;
+    margin: 0;
+}
+
+.form__input{
+    margin: 0;
+    padding: 0;
+    padding-top: 17px;
+    padding-bottom: 13px;
+    padding-left: 25px;
+    outline: none;
+    border: 0;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+
+    @media screen and (min-width: $tab){
+        padding-left: 22px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    &::placeholder{
+        font-size: 15px;
+        font-family: OpenSans, Arial, sans-serif;
+    }
+}
+
+.form__button{
+    border: 0;
+    outline: none;
+    background-color: $azure;
+    border-radius: 8px;
+    color: $black;
+    font-family: OpenSans, Arial, sans-serif;
+    font-weight: 500;
+    padding: 16px;
+    font-size: 15px;
+}

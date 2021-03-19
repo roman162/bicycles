@@ -1,0 +1,43 @@
+.video{
+    background-color: $black;
+    color: $white;
+    padding-top: 79px;
+    padding-bottom: 5px;
+    margin-bottom: 53px;
+}
+
+.video__title{
+    @include title;
+    margin: 0 14px;
+}
+
+.video__description{
+    margin: 0 16px;
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+.video__item{
+    display: flex;
+    position: relative;
+    top: 53px;
+    justify-content: center;
+    align-items: center;
+
+    &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        margin: auto;
+        width: 65px;
+        height: 65px;
+        background-image: url(../images/dest/Play.svg);
+    }
+}
+
+.video__image{
+    display: block;
+}
