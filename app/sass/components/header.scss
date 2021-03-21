@@ -7,21 +7,165 @@
     @media screen and (min-width: $tab){
 
     }
+
+    @media screen and (min-width: $desktop){
+        padding-top: 0;
+        background-image: url(../images/dest/ImgBikeDesktop.jpg);
+        background-size: 100%;
+        min-height: 826px;
+    }
 }
 
 .header__container{
     background-image: url(../images/dest/ImgBikeMobile.jpg);
     background-size: 100%;
     padding-bottom: 52px;
+    padding-top: 70px;
 
     @media screen and (min-width: $tab) {
         background-image: url(../images/dest/ImgBikeTab.jpg);
         padding-bottom: 80px;
+        padding-top: 84px;
+    }
+
+    @media screen and (min-width: $desktop){
+        background-image: none;
+        position: relative;
+        text-align: left;
+    }
+}
+
+.header__wrapper{
+
+    @media screen and (min-width: $desktop){
+        display: flex;
+        justify-content: space-between;
+        max-width: 880px;
+        margin: 0 auto;
+        margin-top: 190px;
     }
 }
 
 .header__menu{
+
+    @media screen and (min-width: $desktop){
+        display: block;
+        max-width: 880px;
+        margin: 0 auto;
+    }
+
+    &--open{
+
+        @media screen and (max-width: $desktop){
+            display: block;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-color: $white;
+            z-index: 5;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.header__menu--open .header__toggle{
+    @media screen and (max-width: $desktop){
+        background-color: transparent;
+    }
+    
+}
+
+.header__menu--open .toggle__gamburger{
+
+    @media screen and (max-width: $desktop){
+        transform: rotate(45deg);
+        width: 30px;
+        background-color: $button-close;
+
+        &:after{
+            display: none;
+        }
+
+        &:before{
+            transform: rotate(-90deg);
+            width: 30px;
+            top: 0;
+            background-color: $button-close;
+        }
+    }
+    
+}
+
+.header__menu--open .header__menu-list{
+
+    @media screen and (max-width: $desktop){
+        display: flex;
+        flex-direction: column;
+        height: 330px;
+        padding-top: 100px;
+        margin: 0;
+        width: 100%;
+    }
+    
+}
+
+.header__menu--open .header__menu-item{
+
+    @media screen and (max-width: $desktop){
+        width: 100%;
+        background-color: $menu-link-background;
+        padding: 17px;
+        text-align: left;
+        margin-bottom: 29px;
+        position: relative;
+
+        &:after{
+            content: '';
+            position: absolute;
+            border-right: 1px solid $menu-arrow;
+            border-bottom: 1px solid $menu-arrow;
+            width: 6px;
+            height: 6px;
+            transform: rotate(-45deg);
+            right: 27px;
+            top: 25px;
+        }
+    }
+    
+}
+
+.header__menu--open .header__menu-link{
+
+    @media screen and (max-width: $desktop){
+        color: $menu-link;
+        font-size: 20px;
+    }
+    
+}
+
+.header__menu-list{
     display: none;
+    padding: 0;
+    list-style: none;
+    
+
+    @media screen and (min-width: $desktop){
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        border-bottom: 1px solid $nav-border;
+        margin: 0;
+        padding: 25px;
+        padding-bottom: 14px;
+    }
+}
+
+.header__menu-link{
+    text-decoration: none;
+    font-weight: 300;
+    color: $nav-color;
 }
 
 .header__logo{
@@ -32,15 +176,27 @@
     @media screen and (min-width: $tab){
         left: 22px;
     }
+
+    @media screen and (min-width: $desktop){
+        top: 66px;
+        left: 0;
+    }
 }
 
 .header__toggle{
-    position: relative;
+    position: absolute;
     margin-left: auto;
     width: 50px;
     height: 50px;
     background-color: $azure;
     display: flex;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+
+    @media screen and (min-width: $desktop){
+        display: none;
+    }
 }
 
 .toggle__gamburger{
@@ -73,15 +229,25 @@
     }
 }
 
+
+
 .header__title{
-    margin-top: 70px;
     font-weight: 500;
     letter-spacing: 0.5px;
     line-height: 42px;
     font-size: 30px;
+    margin: 0;
 
     @media screen and (min-width: $tab){
-        margin-top: 84px;
+
+    }
+
+    @media screen and (min-width: $desktop){
+        font-size: 46px;
+        line-height: 64px;
+        margin-top: 117px;
+        letter-spacing: 1px;
+        margin-bottom: 23px;
     }
 }
 
@@ -96,6 +262,13 @@
         width: 60%;
         margin: 0 auto;
     }
+
+    @media screen and (min-width: $desktop){
+        width: 70%;
+        padding: 0;
+        margin: 0;
+        font-size: 20px;
+    }
 }
 
 .header__form{
@@ -103,7 +276,13 @@
     margin: 0 auto;
     margin-top: 70px;    
     max-width: 356px;
-    padding: 0 16px;    
+    padding: 0 16px;
+    
+    @media screen and (min-width: $desktop){
+        padding: 0;
+        max-width: 327px;
+        color: $white;
+    }
 }
 
 .header__form-item{
@@ -115,6 +294,10 @@
     @media screen and (min-width: $tab){
         margin-top: 30px;
     }
+
+    @media screen and (min-width: $desktop){
+        margin-top: 20px;
+    }
 }
 
 .form__title{
@@ -123,6 +306,10 @@
     display: block;
     font-weight: 500;
     margin: 0;
+
+    @media screen and (min-width: $desktop){
+        font-size: 17px;
+    }
 }
 
 .form__input{
@@ -140,6 +327,12 @@
         padding-left: 22px;
         padding-top: 15px;
         padding-bottom: 15px;
+    }
+
+    @media screen and (min-width: $desktop){
+        padding-left: 28px;
+        padding-top: 17px;
+        padding-bottom: 13px;
     }
 
     &::placeholder{

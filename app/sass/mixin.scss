@@ -4,4 +4,9 @@
     font-weight: 500;
     letter-spacing: -0.1px;
     margin: 0;
+
+    @media screen and (min-width: $desktop){
+        font-size: 30px;
+        line-height: 30px;
+    }
 }

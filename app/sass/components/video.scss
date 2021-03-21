@@ -4,11 +4,26 @@
     padding-top: 79px;
     padding-bottom: 5px;
     margin-bottom: 53px;
+
+    @media screen and (min-width: $tab){
+        padding-top: 65px;
+        max-height: 414px;
+    }
+
+    @media screen and (min-width: $desktop){
+        padding-top: 118px;
+        padding-bottom: 587px;
+    }
 }
 
 .video__title{
     @include title;
     margin: 0 14px;
+
+    @media screen and (min-width: $tab){
+        text-align: center;
+        margin: 0;
+    }
 }
 
 .video__description{
@@ -18,6 +33,17 @@
     line-height: 28px;
     letter-spacing: -0.5px;
     text-align: center;
+
+    @media screen and (min-width: $tab){
+        width: 61%;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+
+    @media screen and (min-width: $desktop){
+        max-width: 360px;
+        margin-top: 20px;
+    }
 }
 
 .video__item{
@@ -27,6 +53,14 @@
     justify-content: center;
     align-items: center;
 
+    @media screen and (min-width: $tab){
+        top: 40px;
+    }
+
+    @media screen and (min-width: $desktop){
+        top: 57px;
+    }
+
     &:after{
         content: '';
         position: absolute;
@@ -35,6 +69,17 @@
         width: 65px;
         height: 65px;
         background-image: url(../images/dest/Play.svg);
+        background-size: 100%;
+
+        @media screen and (min-width: $tab){
+            width: 90px;
+            height: 90px;
+        }
+
+        @media screen and (min-width: $desktop){
+            width: 65px;
+            height: 65px;
+        }
     }
 }
 

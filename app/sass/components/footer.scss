@@ -1,11 +1,29 @@
 .page-footer{
     margin-top: 113px;
     text-align: center;
+    padding-bottom: 20px;
+
+    @media screen and (min-width: $tab){
+        margin-top: 150px;
+    }
+
+    @media screen and (min-width: $desktop){
+        margin-top: 250px;
+        
+    }
 }
 
 .footer__title{
     @include title;
     font-size: 18px;
+
+    @media screen and (min-width: $tab){
+        font-size: 24px;
+    }
+
+    @media screen and (min-width: $desktop){
+        font-size: 30px;
+    }
 }
 
 .footer__adress{
@@ -14,20 +32,40 @@
     color: $map-desc-color;
     margin: 0 29px;
     margin-top: 14px;
+
+    @media screen and (min-width: $desktop){
+        margin: 0 auto;
+        margin-top: 30px;
+        max-width: 550px;
+    }
 }
 
 .footer__map{
     margin-top: 20px;
     width: 100%;
+
+    @media screen and (min-width: $desktop){
+        margin-top: 40px;
+    }
 }
 
 .footer__contacts{
     margin-top: 25px;
     display: inline-grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     grid-gap: 25px;
     font-size: 16px;
     color: $footer-color;
+
+    @media screen and (min-width: $tab){
+        grid-template-columns: auto auto;
+        margin-top: 17px;
+        grid-gap:90px;
+    }
+
+    @media screen and (min-width: $desktop){
+        margin-top: 32px;
+    }
 }
 
 .contacts__item{
@@ -35,7 +73,7 @@
 }
 
 .contacts__email{
-    padding-left: 50px;
+    padding-left: 41px;
 
     &:before{
         content: '';
@@ -46,11 +84,15 @@
         background-image: url(../images/dest/mail.svg);
         width: 26px;
         height: 20px;
+
+        @media screen and (min-width: $tab){
+            left: 0;
+        }
     }
 }
 
 .contacts__tel{
-    padding-left: 25px;
+    padding-left: 37px;
 
     &:before{
         content: '';
@@ -61,5 +103,9 @@
         background-image: url(../images/dest/phone.svg);
         width: 21.5px;
         height: 23px;
+
+        @media screen and (min-width: $tab){
+            left: 0;
+        }
     }
 }

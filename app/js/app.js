@@ -1,17 +1,35 @@
 const header = document.querySelector('.page-header');
-const headerToggle = document.querySelector('.page-header__button-toggle');
-const headerMenu = document.querySelector('.page-header__menu');
+const headerToggle = document.querySelector('.header__toggle');
+const headerMenu = document.querySelector('.header__menu');
+const menuList = document.querySelector('.header__menu-list');
 
-if (header.classList.contains('no--js')) {
-    header.classList.remove('no--js');
+const menuOpen = function () {
+    if (headerMenu.classList.contains('header__menu--open')) {
+        headerMenu.classList.remove('header__menu--open');
+        document.body.classList.remove('no-scroll');
+        console.log(11);
+    } else {
+        headerMenu.classList.add('header__menu--open');
+        document.body.classList.add('no-scroll');
+        console.log(22)
+    }
 }
 
-headerToggle.addEventListener('click', function () {
-    if (headerMenu.classList.contains('page-header__menu--open')) {
-        headerMenu.classList.remove('page-header__menu--open');
-        headerToggle.classList.remove('page-header__button-toggle--menu-open');
+headerToggle.addEventListener('click',function () {
+    if (headerMenu.classList.contains('header__menu--open')) {
+        headerMenu.classList.remove('header__menu--open');
+        document.body.classList.remove('no-scroll');
     } else {
-        headerMenu.classList.add('page-header__menu--open');
-        headerToggle.classList.add('page-header__button-toggle--menu-open');
+        headerMenu.classList.add('header__menu--open');
+        document.body.classList.add('no-scroll');
     }
-})
+});
+menuList.addEventListener('click', function () {
+    if (headerMenu.classList.contains('header__menu--open')) {
+        headerMenu.classList.remove('header__menu--open');
+        document.body.classList.remove('no-scroll');
+    } else {
+        headerMenu.classList.add('header__menu--open');
+        document.body.classList.add('no-scroll');
+    }
+});
